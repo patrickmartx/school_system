@@ -7,4 +7,6 @@ public interface StudentService {
     Student findByRegistrationNumber(Long registrationNumber);
 
     Student create(Student studentToCreate);
+
+    void remove(Student studentToRemove);
 }

@@ -35,4 +35,13 @@ public class StudentController {
         return ResponseEntity.created(location).body(studentCreated);
     }
 
+    @DeleteMapping("/{registrationNumber}")
+    public ResponseEntity<Student> create(@PathVariable Long registrationNumber) {
+        var studentToRemove = studentService.findByRegistrationNumber(registrationNumber);
+        studentService.remove(studentToRemove);
+
+        return ResponseEntity.ok().body(studentToRemove);
+    }
+
+
 }

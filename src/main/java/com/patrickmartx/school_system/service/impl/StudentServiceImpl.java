@@ -15,6 +15,7 @@ public class StudentServiceImpl implements StudentService {
     public StudentServiceImpl(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
+
     @Override
     public Student findByRegistrationNumber(Long registrationNumber) {
         return studentRepository.findById(registrationNumber).orElseThrow(NoSuchElementException::new);
@@ -22,9 +23,17 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student create(Student studentToCreate) {
-        if (studentRepository.existsById(studentToCreate.getRegistrationNumber())){
+        if (studentRepository.existsById(studentToCreate.getRegistrationNumber())) {
             throw new IllegalArgumentException("Esse numero de registro já existe no banco");
         }
         return studentRepository.save(studentToCreate);
+    }
+
+    @Override
+    public void remove(Student studentToRemove) {
+        if (!studentRepository.existsById(studentToRemove.getRegistrationNumber())) {
+            throw new IllegalArgumentException("Não existe esse usuario no banco");
+        }
+        studentRepository.delete(studentToRemove);
     }
 }
