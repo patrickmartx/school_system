@@ -46,3 +46,6 @@ classDiagram
 ```
 
 ## Endpoints
+Get - /aluno/{id}
+Post - /aluno
+Delete - /aluno/id
