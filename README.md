@@ -40,7 +40,7 @@ classDiagram
 
     Student "1" *-- "many" Notice
     Student "1" *-- "many" Subject
-    Student "1" -- "1" Classroom
+    Student "many" -- "1" Classroom
 
 ```
 
