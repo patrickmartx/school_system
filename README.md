@@ -39,17 +39,9 @@ classDiagram
       - List<Professor> professors
     }
 
-    class Professor {
-      - String name
-      - Subject subject
-      - float evaluation
-    }
-
     Student "1" *-- "many" Notice
     Student "1" *-- "many" Subject
     Student "1" -- "1" Classroom
-    Classroom "1" *-- "many" Professor
-    Professor "1" -- "1" Subject
 
 ```
 
