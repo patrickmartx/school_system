@@ -46,5 +46,11 @@ classDiagram
 
 ## Endpoints
 Get - /aluno/{id}
+
 Post - /aluno
+
 Delete - /aluno/id
+
+## TODO
+- Adcionar Curriculo como uma classe com matérias e notas
+- Adcionar Professor, com um professor podendo dar aula pra uma matéria e uma matéria podendo ter vários professores.
