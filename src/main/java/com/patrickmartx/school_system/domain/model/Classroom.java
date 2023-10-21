@@ -11,8 +11,6 @@ public class Classroom {
     private Long id;
     @Column(nullable = false)
     private String classCode;
-    @ManyToMany
-    private List<Professor> professors;
 
     public Long getId() {
         return id;
@@ -28,14 +26,6 @@ public class Classroom {
 
     public void setClassCode(String classCode) {
         this.classCode = classCode;
-    }
-
-    public List<Professor> getProfessors() {
-        return professors;
-    }
-
-    public void setProfessors(List<Professor> professors) {
-        this.professors = professors;
     }
 }
 
