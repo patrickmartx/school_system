@@ -7,11 +7,13 @@ import java.util.List;
 
 @Entity(name = "tb_student")
 public class Student {
-    private String name;
-    private String grade;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long registrationNumber;
+    private Long id;
+    private String name;
+    private String grade;
+    @Column(unique = true)
+    private String registrationNumber;
     @Column(precision = 4, scale = 2)
     private BigDecimal cr;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -20,6 +22,14 @@ public class Student {
     private List<Subject> subjects;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Classroom classroom;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -37,11 +47,11 @@ public class Student {
         this.grade = grade;
     }
 
-    public Long getRegistrationNumber() {
+    public String getRegistrationNumber() {
         return registrationNumber;
     }
 
-    public void setRegistrationNumber(Long registrationNumber) {
+    public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
 

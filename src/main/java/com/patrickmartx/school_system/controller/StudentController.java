@@ -18,9 +18,9 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping("/{registrationNumber}")
-    public ResponseEntity<Student> findByRegistrationNumber(@PathVariable Long registrationNumber) {
-        var student = studentService.findByRegistrationNumber(registrationNumber);
+    @GetMapping("/{id}")
+    public ResponseEntity<Student> findByRegistrationNumber(@PathVariable Long id) {
+        var student = studentService.findById(id);
         return ResponseEntity.ok(student);
     }
 
@@ -35,9 +35,9 @@ public class StudentController {
         return ResponseEntity.created(location).body(studentCreated);
     }
 
-    @DeleteMapping("/{registrationNumber}")
-    public ResponseEntity<Student> create(@PathVariable Long registrationNumber) {
-        var studentToRemove = studentService.findByRegistrationNumber(registrationNumber);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Student> create(@PathVariable Long id) {
+        var studentToRemove = studentService.findById(id);
         studentService.remove(studentToRemove);
 
         return ResponseEntity.ok().body(studentToRemove);

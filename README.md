@@ -16,6 +16,7 @@ O modelo da página foi criado no figma e pode ser encontrado [aqui](https://www
 ```mermaid
 classDiagram
     class Student {
+      - Long id
       - String name
       - String grade
       - String registrationNumber
@@ -26,15 +27,18 @@ classDiagram
     }
 
     class Notice {
+      - Long id
       - String title
       - String body
     }
 
     class Subject {
+      - Long id
       - String name
     }
 
     class Classroom {
+      - Long id
       - String classCode
     }
 

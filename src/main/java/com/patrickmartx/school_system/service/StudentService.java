@@ -4,7 +4,7 @@ import com.patrickmartx.school_system.domain.model.Student;
 
 public interface StudentService {
 
-    Student findByRegistrationNumber(Long registrationNumber);
+    Student findById(Long id);
 
     Student create(Student studentToCreate);
 
