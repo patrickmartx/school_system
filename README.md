@@ -36,7 +36,6 @@ classDiagram
 
     class Classroom {
       - String classCode
-      - List<Professor> professors
     }
 
     Student "1" *-- "many" Notice
