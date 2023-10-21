@@ -20,7 +20,7 @@ classDiagram
       - String name
       - String grade
       - String registrationNumber
-      - float cr
+      - BigDecimal cr
       - List<Notice> notices
       - List<Subject> subjects
       - Classroom classroom
@@ -36,6 +36,12 @@ classDiagram
       - Long id
       - String name
     }
+    
+    class Curriculum {
+      - Long id
+      - Subject subject
+      - BigDecimal assessment
+    }
 
     class Classroom {
       - Long id
@@ -45,6 +51,8 @@ classDiagram
     Student "1" *-- "many" Notice
     Student "1" *-- "many" Subject
     Student "many" -- "1" Classroom
+    Curriculum "1" -- "many" Subject
+    Student "1" *-- "1" Curriculum
 
 ```
 

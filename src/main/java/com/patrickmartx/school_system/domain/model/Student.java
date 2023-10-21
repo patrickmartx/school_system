@@ -23,6 +23,9 @@ public class Student {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Classroom classroom;
 
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Curriculum curriculum;
+
     public Long getId() {
         return id;
     }
@@ -87,4 +90,11 @@ public class Student {
         this.classroom = classroom;
     }
 
+    public Curriculum getCurriculum() {
+        return curriculum;
+    }
+
+    public void setCurriculum(Curriculum curriculum) {
+        this.curriculum = curriculum;
+    }
 }
