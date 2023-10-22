@@ -55,6 +55,44 @@ Post - /aluno
 
 Delete - /aluno/id
 
+## Exemplo de uso
+
+```
+{
+  "id": 1,
+  "name": "Patrick",
+  "grade": "9º ano",
+  "registrationNumber": "144192",
+  "cr": 9.5,
+  "notices": [
+    {
+      "id": 1,
+      "title": "Aviso 1",
+      "body": "Este é o primeiro aviso."
+    },
+    {
+      "id": 2,
+      "title": "Aviso 2",
+      "body": "Este é o segundo aviso."
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Matemática"
+    },
+    {
+      "id": 2,
+      "name": "História"
+    }
+  ],
+  "classroom": {
+    "id": 1,
+    "classCode": "T902"
+  }
+}
+```
+
 ## TODO
 - Adcionar Curriculo como uma classe com matérias e notas
 - Adcionar Professor, com um professor podendo dar aula pra uma matéria e uma matéria podendo ter vários professores.
