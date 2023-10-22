@@ -57,7 +57,8 @@ Delete - /aluno/id
 
 ## Exemplo de uso
 
-```
+Criação de estudante em Json
+```json
 {
   "id": 1,
   "name": "Patrick",
