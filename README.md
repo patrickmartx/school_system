@@ -54,7 +54,7 @@ classDiagram
 | GET    | "/aluno"      |
 | GET    | "/aluno/{id}" |
 | POST   | "/aluno"      |
-| Delete | "/aluno/{id}" |
+| DELETE | "/aluno/{id}" |
 
 ## Exemplo de uso
 
