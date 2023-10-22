@@ -5,6 +5,7 @@ import com.patrickmartx.school_system.domain.repository.StudentRepository;
 import com.patrickmartx.school_system.service.StudentService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -19,6 +20,11 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student findById(Long id) {
         return studentRepository.findById(id).orElseThrow(NoSuchElementException::new);
+    }
+
+    @Override
+    public List<Student> findAll() {
+        return studentRepository.findAll();
     }
 
     @Override

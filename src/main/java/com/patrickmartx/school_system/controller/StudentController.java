@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/aluno")
@@ -22,6 +23,12 @@ public class StudentController {
     public ResponseEntity<Student> findByRegistrationNumber(@PathVariable Long id) {
         var student = studentService.findById(id);
         return ResponseEntity.ok(student);
+    }
+
+    @GetMapping()
+    public ResponseEntity<List<Student>> findAll() {
+        List<Student> listStudents = studentService.findAll();
+        return ResponseEntity.ok(listStudents);
     }
 
     @PostMapping()

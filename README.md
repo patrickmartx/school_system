@@ -49,11 +49,12 @@ classDiagram
 ```
 
 ## Endpoints
-Get - /aluno/{id}
-
-Post - /aluno
-
-Delete - /aluno/id
+| Method | Route         |
+|--------|---------------|
+| GET    | "/aluno"      |
+| GET    | "/aluno/{id}" |
+| POST   | "/aluno"      |
+| Delete | "/aluno/{id}" |
 
 ## Exemplo de uso
 
